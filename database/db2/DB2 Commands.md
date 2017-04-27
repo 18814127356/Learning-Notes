@@ -68,8 +68,10 @@
 
 - 添加外键
  `ALTER TABLE {table_name} ADD CONSTRAINT {constraint_name} FOREIGN KEY ({column_name}) REFERENCES {referenced_column_name}`
+- 查看建表语句
+ 需要使用`db2look`工具，例如`db2look -d test -t user -e`显示`user`表的建表语句以及所有在该表上执行的`DDL`语句
 
 ### 分页
 
- `SELECT * FROM (SELECT ROWNUMBER() OVER(ORDER BY col_name) AS ROWNUMBER, t.* FROM tb_name AS t ORDER BY {col_name}) WHERE ROWNUMBER BETWEEN 1 AND 10`
+ `SELECT * FROM (SELECT ROWNUMBER() OVER(ORDER BY col_name) AS ROWNUMBER, u.* from tb_name as t order by {col_name}) WHERE ROWNUMBER BETWEEN 1 AND 10`
 
