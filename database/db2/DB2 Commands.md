@@ -8,6 +8,9 @@
 - 打开命令行窗口
 进入`BIN`目录，运行`db2cmd`，在运行`db2`
 
+- 开启事务命令行
+进入`BIN`目录，运行`db2cmd`，在运行`db2 +c`
+
 ### 操作数据库命令
 
 - 创建数据库
@@ -69,7 +72,7 @@
 - 添加外键
  `ALTER TABLE {table_name} ADD CONSTRAINT {constraint_name} FOREIGN KEY ({column_name}) REFERENCES {referenced_column_name}`
 - 查看建表语句
- 需要使用`db2look`工具，例如`db2look -d test -t user -e`显示`user`表的建表语句以及所有在该表上执行的`DDL`语句
+ 需要使用`db2look`工具，例如`db2look -d test -t user -e`显示*user*表的建表语句以及所有在该表上执行的`DDL`语句
 
 ### 分页
 
