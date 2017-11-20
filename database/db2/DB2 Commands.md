@@ -22,9 +22,6 @@
 - 断开连接
  `connect reset`
 
-- 列出所有数据库
- `list db directory`
-
 - 列出所有激活的数据库
  `list active databases`
 
@@ -34,6 +31,26 @@
 - 列出所有数据库配置 
  `get db cfg`
 
+- 新增数据库节点编目
+ `catalog tcpip node {node_name} remote {ip} server {port} remote_instance {remote_instance_name}`
+ 
+- 查看数据库节点编目
+ `list node directory`
+
+- 删除数据库节点编目
+ `db2 uncatalog node {node_name}`
+
+- 新增数据库编目
+ `catalog db {remote_instance_name} as {local_db_name} at node {node_name}`
+ 
+- 查看数据库编目
+`list db directory`
+
+- 删除数据库编目
+ `uncatalog db {local_db_name}`
+ 
+- 远程连接数据库
+ `只需先新增数据库节点编目，再新增数据库编目，然后按连接本地数据库方式一样即可`
 
 ### 操作表命令
 - 列出所有用户表
@@ -46,7 +63,7 @@
  `list tables for all`
 
 - 列出用户表
-``list tables for user`
+`list tables for user`
 
 - 列出特定用户表
   `list tables for schema [username]`
