@@ -1,4 +1,6 @@
-### 启停
+# DB2命令总结
+
+## 启停
 - 启动数据库实例
  ```db2start```
 
@@ -11,7 +13,7 @@
 - 开启事务命令行
 进入`BIN`目录，运行`db2cmd`，在运行`db2 +c`
 
-### 操作数据库命令
+## 操作数据库命令
 
 - 创建数据库
  `create db [db_name]`
@@ -44,7 +46,7 @@
  `catalog db {remote_instance_name} as {local_db_name} at node {node_name}`
  
 - 查看数据库编目
-`list db directory`
+ `list db directory`
 
 - 删除数据库编目
  `uncatalog db {local_db_name}`
@@ -52,7 +54,7 @@
 - 远程连接数据库
  `只需先新增数据库节点编目，再新增数据库编目，然后按连接本地数据库方式一样即可`
 
-### 操作表命令
+## 操作表命令
 - 列出所有用户表
  `list tables`
 
@@ -91,7 +93,7 @@
 - 查看建表语句
  需要使用`db2look`工具，例如`db2look -d test -t user -e`显示*user*表的建表语句以及所有在该表上执行的`DDL`语句
 
-### 分页
+## 分页
 
  `SELECT * FROM (SELECT ROWNUMBER() OVER(ORDER BY col_name) AS ROWNUMBER, u.* from tb_name as t order by {col_name}) WHERE ROWNUMBER BETWEEN 1 AND 10`
 
