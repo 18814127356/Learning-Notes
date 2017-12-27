@@ -21,5 +21,5 @@
 删除分支
 - ```git checkout <name>```
 切换分支
--```git merge <name>```
+- ```git merge <name>```
 合并某分支到当前分支
