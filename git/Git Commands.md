@@ -29,9 +29,9 @@
 查看两个分支的提交历史差异，这里的位置是left对应dev，right对应master，所以显示的结果中，带左箭头<的是dev分支上的提交，带右箭头的是master分支上的提交
 - ```git diff <branch1> <branch2> >> diff.txt```
 查看两个分支的差异
-- ```git stash save "保存gengg"```
-在切换分支前保存当前分支的更改，并让当前工作空间回到未修改状态，以避免切换到其他分支时影响其他分支
+- ```git stash save -a "保存gengg"```
+在切换分支前保存当前分支的更改，并让当前工作空间回到未修改状态，以避免切换到其他分支时影响其他分支， 如果不指定-a参数，那么新增文件将不会被保存
 - ```git stash list```
 查看stash列表
-- ```git stash apply stash@{0}```
-回到指定的修改状态
+- ```git stash apply stash@{0}```  ```git stash pop stash@{0}```
+回到指定的修改状态，pop与apply的区别在于pop会删除对应的stash
