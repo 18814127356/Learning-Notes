@@ -82,6 +82,9 @@
 - ```git stash apply stash@{0}```  ```git stash pop stash@{0}```
 回到指定的修改状态，pop与apply的区别在于pop会删除对应的stash
 
+- ```git stash drop stash@{0}```
+移除stash
+
 ------
 
 ## git tag
